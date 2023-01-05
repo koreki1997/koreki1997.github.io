@@ -152,6 +152,104 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-linux学习-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/05/linux%E5%AD%A6%E4%B9%A0-1/">linux学习_1</a>
+    </h1>
+  
+
+        
+        <a href="/2023/01/05/linux%E5%AD%A6%E4%B9%A0-1/" class="archive-article-date">
+  	<time datetime="2023-01-05T13:03:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="linux目录结构"><a href="#linux目录结构" class="headerlink" title="linux目录结构"></a>linux目录结构</h1><p>倒置的树状<br>根目录为&#x2F;</p>
+<h2 id="常用目录解释"><a href="#常用目录解释" class="headerlink" title="常用目录解释"></a>常用目录解释</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/wp-content/uploads/2014/06/d0c50-linux2bfile2bsystem2bhierarchy.jpg">!树状结构目录</a></p>
+<h3 id="1、-x2F-bin"><a href="#1、-x2F-bin" class="headerlink" title="1、&#x2F;bin"></a>1、&#x2F;bin</h3><p>bin是Binaries的缩写，这个目录存放着最经常使用的命令。</p>
+<h3 id="2、-x2F-boot"><a href="#2、-x2F-boot" class="headerlink" title="2、&#x2F;boot"></a>2、&#x2F;boot</h3><p>存放启动linux时使用的一些核心文件，包括一些连接文件以及镜像。</p>
+<h3 id="3、-x2F-dev"><a href="#3、-x2F-dev" class="headerlink" title="3、&#x2F;dev"></a>3、&#x2F;dev</h3><p>device的缩写，存放系统的硬件，linux使用文件管理硬件。</p>
+<h3 id="4、-x2F-etc"><a href="#4、-x2F-etc" class="headerlink" title="4、&#x2F;etc"></a>4、&#x2F;etc</h3><p>存放所有的管理所需要的配置文件和子目录。</p>
+<h3 id="5、-x2F-home"><a href="#5、-x2F-home" class="headerlink" title="5、&#x2F;home"></a>5、&#x2F;home</h3><p>用户的主目录，在 Linux 中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。</p>
+<h3 id="6、-x2F-lib"><a href="#6、-x2F-lib" class="headerlink" title="6、&#x2F;lib"></a>6、&#x2F;lib</h3><p>lib 是 Library(库) 的缩写这个目录里存放着系统最基本的动态连接共享库，其作用类似于 Windows 里的 DLL 文件。几乎所有的应用程序都需要用到这些共享库。</p>
+<h3 id="7、-x2F-lost-found"><a href="#7、-x2F-lost-found" class="headerlink" title="7、&#x2F;lost + found"></a>7、&#x2F;lost + found</h3><p>这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。</p>
+<h3 id="8、-x2F-media"><a href="#8、-x2F-media" class="headerlink" title="8、&#x2F;media"></a>8、&#x2F;media</h3><p>linux 系统会自动识别一些设备，例如U盘、光驱等等，当识别后，Linux 会把识别的设备挂载到这个目录下。</p>
+<h3 id="9、-x2F-mnt"><a href="#9、-x2F-mnt" class="headerlink" title="9、&#x2F;mnt"></a>9、&#x2F;mnt</h3><p>系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在 &#x2F;mnt&#x2F; 上，然后进入该目录就可以查看光驱里的内容了。</p>
+<h3 id="10、-x2F-opt"><a href="#10、-x2F-opt" class="headerlink" title="10、&#x2F;opt"></a>10、&#x2F;opt</h3><p>opt 是 optional(可选) 的缩写，这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。</p>
+<h3 id="11、-x2F-proc"><a href="#11、-x2F-proc" class="headerlink" title="11、&#x2F;proc"></a>11、&#x2F;proc</h3><p>proc 是 Processes(进程) 的缩写，&#x2F;proc 是一种伪文件系统（也即虚拟文件系统），存储的是当前内核运行状态的一系列特殊文件，这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。<br>这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件，比如可以通过下面的命令来屏蔽主机的ping命令，使别人无法ping你的机器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</span><br></pre></td></tr></table></figure>
+
+<h3 id="12、-x2F-root"><a href="#12、-x2F-root" class="headerlink" title="12、&#x2F;root"></a>12、&#x2F;root</h3><p>该目录为系统管理员，也称作超级权限者的用户主目录。</p>
+<h3 id="13、-x2F-sbin"><a href="#13、-x2F-sbin" class="headerlink" title="13、&#x2F;sbin"></a>13、&#x2F;sbin</h3><p>s 就是 Super User 的意思，是 Superuser Binaries (超级用户的二进制文件) 的缩写，这里存放的是系统管理员使用的系统管理程序。</p>
+<h3 id="14、-x2F-selinux"><a href="#14、-x2F-selinux" class="headerlink" title="14、&#x2F;selinux"></a>14、&#x2F;selinux</h3><p> 这个目录是 Redhat&#x2F;CentOS 所特有的目录，Selinux 是一个安全机制，类似于 windows 的防火墙，但是这套机制比较复杂，这个目录就是存放selinux相关的文件的。</p>
+<h3 id="15、-x2F-srv"><a href="#15、-x2F-srv" class="headerlink" title="15、&#x2F;srv"></a>15、&#x2F;srv</h3><p>该目录存放一些服务启动之后需要提取的数据。</p>
+<h3 id="16、-x2F-sys"><a href="#16、-x2F-sys" class="headerlink" title="16、&#x2F;sys"></a>16、&#x2F;sys</h3><p>这是 Linux2.6 内核的一个很大的变化。该目录下安装了 2.6 内核中新出现的一个文件系统 sysfs 。</p>
+<p>sysfs 文件系统集成了下面3种文件系统的信息：针对进程信息的 proc 文件系统、针对设备的 devfs 文件系统以及针对伪终端的 devpts 文件系统。</p>
+<p>该文件系统是内核设备树的一个直观反映。</p>
+<p>当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建。</p>
+<h3 id="17、-x2F-tmp"><a href="#17、-x2F-tmp" class="headerlink" title="17、&#x2F;tmp"></a>17、&#x2F;tmp</h3><p>tmp 是 temporary(临时) 的缩写这个目录是用来存放一些临时文件的。</p>
+<h3 id="18、-x2F-usr"><a href="#18、-x2F-usr" class="headerlink" title="18、&#x2F;usr"></a>18、&#x2F;usr</h3><p> usr 是 unix shared resources(共享资源) 的缩写，这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于 windows 下的 program files 目录。</p>
+<h3 id="19、-x2F-usr-x2F-bin"><a href="#19、-x2F-usr-x2F-bin" class="headerlink" title="19、&#x2F;usr&#x2F;bin"></a>19、&#x2F;usr&#x2F;bin</h3><p>系统用户使用的应用程序。</p>
+<h3 id="20、-x2F-usr-x2F-sbin"><a href="#20、-x2F-usr-x2F-sbin" class="headerlink" title="20、&#x2F;usr&#x2F;sbin"></a>20、&#x2F;usr&#x2F;sbin</h3><p>超级用户使用的比较高级的管理程序和系统守护程序。</p>
+<h3 id="21、-x2F-usr-x2F-src"><a href="#21、-x2F-usr-x2F-src" class="headerlink" title="21、&#x2F;usr&#x2F;src"></a>21、&#x2F;usr&#x2F;src</h3><p>内核源代码默认的放置目录。</p>
+<h3 id="22、-x2F-var"><a href="#22、-x2F-var" class="headerlink" title="22、&#x2F;var"></a>22、&#x2F;var</h3><p>var 是 variable(变量) 的缩写，这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。</p>
+<h3 id="23、-x2F-run"><a href="#23、-x2F-run" class="headerlink" title="23、&#x2F;run"></a>23、&#x2F;run</h3><p>是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。如果你的系统上有 &#x2F;var&#x2F;run 目录，应该让它指向 run。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a><strong>注意</strong></h2><p>在Linux文件系统中有两个特殊的目录，一个用户所在的工作目录，也叫当前目录，可以使用一个点 . 来表示；另一个是当前目录的上一级目录，也叫父目录，可以使用两个点 .. 来表示。</p>
+<ul>
+<li>. ：代表当前的目录，也可以使用 .&#x2F; 来表示；</li>
+<li>.. ：代表上一层目录，也可以 ..&#x2F; 来代表。</li>
+<li>如果一个目录或文件名以一个点 . 开始，表示这个目录或文件是一个隐藏目录或文件(如：.bashrc)。即以默认方式查找时，不显示该目录或文件。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/01/05/linux%E5%AD%A6%E4%B9%A0-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hexo-个人博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -359,7 +457,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 koreki
+    		&copy; 2023 koreki
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
