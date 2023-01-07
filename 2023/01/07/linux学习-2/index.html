@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023 | Kblog</title>
+  <title>linux学习-2 | Kblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kblog">
-<meta property="og:url" content="http://example.com/archives/2023/index.html">
+  <meta name="description" content="1、vi和vimlinux编辑器 三种模式1、正常模式  默认模式，可以使用方向键移动光标，可以删除字符、整行，可以复制、粘贴。 2、插入模式 按下i、I、o、O、a、A、r、R等任一字符进入编辑模式。 3、命令行模式 按键esc再输入：可以完成读取、存盘、替换、退出、显示行号等。 快捷键 yy、拷贝当前行。 5yy、拷贝当前行向下5行，输入p粘贴。 dd、删除当前行。 5dd、删除当前行向下5行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux学习-2">
+<meta property="og:url" content="http://example.com/2023/01/07/linux%E5%AD%A6%E4%B9%A0-2/index.html">
 <meta property="og:site_name" content="Kblog">
+<meta property="og:description" content="1、vi和vimlinux编辑器 三种模式1、正常模式  默认模式，可以使用方向键移动光标，可以删除字符、整行，可以复制、粘贴。 2、插入模式 按下i、I、o、O、a、A、r、R等任一字符进入编辑模式。 3、命令行模式 按键esc再输入：可以完成读取、存盘、替换、退出、显示行号等。 快捷键 yy、拷贝当前行。 5yy、拷贝当前行向下5行，输入p粘贴。 dd、删除当前行。 5dd、删除当前行向下5行">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-07T14:20:13.000Z">
+<meta property="article:modified_time" content="2023-01-07T15:27:50.538Z">
 <meta property="article:author" content="koreki">
 <meta name="twitter:card" content="summary">
   
@@ -150,76 +154,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-linux学习-2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      linux学习-2
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/01/07/linux%E5%AD%A6%E4%B9%A0-2/" class="archive-article-date">
+
+        
+        <a href="/2023/01/07/linux%E5%AD%A6%E4%B9%A0-2/" class="archive-article-date">
   	<time datetime="2023-01-07T14:20:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/01/07/linux%E5%AD%A6%E4%B9%A0-2/">linux学习-2</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1、vi和vim"><a href="#1、vi和vim" class="headerlink" title="1、vi和vim"></a>1、vi和vim</h1><p>linux编辑器</p>
+<h2 id="三种模式"><a href="#三种模式" class="headerlink" title="三种模式"></a>三种模式</h2><p>1、正常模式 </p>
+<p>默认模式，可以使用方向键移动光标，可以删除字符、整行，可以复制、粘贴。</p>
+<p>2、插入模式</p>
+<p>按下i、I、o、O、a、A、r、R等任一字符进入编辑模式。</p>
+<p>3、命令行模式</p>
+<p>按键esc再输入：可以完成读取、存盘、替换、退出、显示行号等。</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>yy、拷贝当前行。</li>
+<li>5yy、拷贝当前行向下5行，输入p粘贴。</li>
+<li>dd、删除当前行。</li>
+<li>5dd、删除当前行向下5行。</li>
+<li>：&#x2F;关键字 回车查找，输入n查找下一处。</li>
+<li>：set nu</li>
+<li>：set nonu 设置取消文件的行号。</li>
+<li>正常模式下G到最末行，gg到最首行。</li>
+<li>正常模式下u撤销动作。</li>
+<li>正常模式下20+shift+g移动到20行。</li>
+<li>…</li>
+</ul>
+<h1 id="2、关机和重启命令"><a href="#2、关机和重启命令" class="headerlink" title="2、关机和重启命令"></a>2、关机和重启命令</h1><h2 id="快捷键-1"><a href="#快捷键-1" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>shutdown -h now 立刻关机。</li>
+<li>shutdown -h 1   1分钟后关机。</li>
+<li>shutdown -r now 现在重启计算机。</li>
+<li>halt 立刻关机。</li>
+<li>reboot 立刻重启。</li>
+<li>sync 把内存的数据同步到磁盘。</li>
+</ul>
+<h1 id="3、用户登录和注销"><a href="#3、用户登录和注销" class="headerlink" title="3、用户登录和注销"></a>3、用户登录和注销</h1><p>登录时尽量以普通用户登录，可以使用su - 用户名切换管理员身份。输入logout可注销用户，但在图形运行级别无效，在运行级别3下有效。linux系统是一个多用户多任务的操作系统，任何一个使用系统资源的用户都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>useradd 用户名，添加用户，用户创建成功会自动创建和用户同名的家目录，也可以使用user -d 指定目录 新的用户名，给新创建的用户指定家目录。</li>
+<li>passwd 用户名，指定密码。</li>
+<li>userdel 用户名，删除用户，但保留家目录，userdel -r tom，删除用户及家目录。</li>
+<li>id 用户名，查看用户信息。</li>
+<li>whoami，查看当前用户</li>
+<li>su - 用户名，切换用户，低权限向高权限需要输入密码，高向低，返回原来用户使用exit&#x2F;logout</li>
+</ul>
+<h2 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h2><p>系统可以对有共性&#x2F;相同权限的用户进行统一的管理，</p>
+<ul>
+<li>groupadd 组名，新增组。</li>
+<li>groupdel 组名，删除组。</li>
+<li>useradd -g 用户组 用户名，增加用户时指定组。</li>
+<li>usermod -g 用户组 用户名，修改用户的组。</li>
+</ul>
+<p>与用户和组相关的文件</p>
+<ul>
+<li>&#x2F;etc&#x2F;passwd,用户的配置文件，记录用户的各种信息。每行的含义：用户名：口令：用户识别号：组识别号：注释性描述：主目录：登录shell。</li>
+<li>&#x2F;etc&#x2F;shadow,口令的配置文件，每行的含义：登录名：加密口令：最后一次修改时间：最小时间间隔：最大时间间隔：警告时间：不活动时间：失效时间：标志。</li>
+<li>&#x2F;etc&#x2F;group,组的配置文件，记录linux包含的组的信息，每行含义：组名：口令：组识别号：组内用户列表。</li>
+</ul>
+<h1 id="4、运行级别"><a href="#4、运行级别" class="headerlink" title="4、运行级别"></a>4、运行级别</h1><p>0：关机。1：单用户（找回丢失密码）。2：多用户状态无网络。3：多用户状态有网络。4：系统未使用保留给用户。5：图形界面。6：系统重启。常用级别3，5。</p>
+<p>在CentOS7以前，&#x2F;etc&#x2F;inittab文件中进行了简化，multi-user.target:analogous to runlevel 3。graphical.target:analogous to runlevel 5</p>
+<h2 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>init 0&#x2F;1&#x2F;2&#x2F;3&#x2F;4&#x2F;5&#x2F;6 通过init切换不同的运行级别。</li>
+<li>systemctl get-default,显示当前默认运行级别</li>
+<li>systemctl set-default graphical.target,设置默认运行级别。</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/01/07/linux%E5%AD%A6%E4%B9%A0-2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/01/05/linux%E5%AD%A6%E4%B9%A0-1/" class="archive-article-date">
-  	<time datetime="2023-01-05T13:03:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/05/linux%E5%AD%A6%E4%B9%A0-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux学习_1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/01/05/linux%E5%AD%A6%E4%B9%A0-1/">linux学习_1</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -242,8 +361,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
